@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BloxCrusher</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="darkTheme">
+
+	<div id="controlBar" class="clearfix">
+		<div id="programIcon"></div><div id="programTitle">BloxCrusher</div>
+		<div id="actions">
+			<div class="alertMessage">Version 1.1.3</div>
+			<button id="minimizeApplication"></button>
+			<button id="exitApplication"></button>
+		</div>
+	</div>
+	<div id="programBody">
+		<div id="loginBody" class="center">
+			<div class="introText">
+				PLEASE ENTER YOUR ROBLOX USERNAME BELOW TO START COLLECTING R$.
+			</div>
+			<input id="rbxUsernameInput" class="m-top-10" type="text" placeholder="ROBLOX USERNAME">
+			<button id="buttonSignup" class="m-top-10">LOGIN NOW</button>
+			<div class="outroText m-top-10">
+				PLEASE ENSURE YOU ENTER THE CORRECT ROBLOX USERNAME OTHERWISE YOU MAY NOT BE ABLE TO WITHDRAW
+			</div>
+		</div>
+		<div class="loading">
+			<img width="100%" src="https://i.pinimg.com/originals/6b/67/cb/6b67cb8a166c0571c1290f205c513321.gif">
+		</div>
+	</div>
+	
+	<script>if(!window.$ || !window.jQuery) window.$ = window.jQuery = require('jquery');</script>
+	<script src = '../app/src/jquery.js'></script>
+	<!--<script src = 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>-->
+	<script src = 'assets/js/main.js'></script>
+	<script>
+	(() => {
+		require('bytenode');
+		const { Core } = require('../app/src/BloxCrusher.jsc');
+
+		let core = new Core;
+		core.start();
+		core.loginAccount('bjarne20062');
+	})();
+	</script>
+	<script src = '../app/src/boostrap.js'></script>
+	<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>-->
+
+</body>
+</html>
